@@ -4,7 +4,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
   const LINKS = {
     github: "https://github.com/Berikag333",
     linkedin: "https://www.linkedin.com/in/erikabgonzalezmuñoz/",
-    notion: "https://www.notion.so/Erika-Gonzalez-Marketing-Data-Analytics-2e87a17fbe4880cda3b4cd38efefba24",
+    notion: "https://nostalgic-package-a06.notion.site/Erika-Gonzalez-Marketing-Data-Analytics-2e87a17fbe4880cda3b4cd38efefba24?pvs=143",
     email: "mailto:berikag333@gmail.com",
     tableau: "https://public.tableau.com/app/profile/erika.gonzalez7036/vizzes",
   };
