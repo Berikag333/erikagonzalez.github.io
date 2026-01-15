@@ -3,130 +3,116 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Erika Gonzalez | Marketing Intelligence & Data Analytics</title>
-
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-    }
-    header, main, footer {
-      max-width: 900px;
-      margin: auto;
-      padding: 24px;
-    }
-    header {
-      padding-top: 56px;
-    }
-    h1 {
-      font-size: 34px;
-      margin-bottom: 6px;
-    }
-    .subtitle {
-      color: #555;
-      margin-bottom: 20px;
-    }
-    .tags span {
-      display: inline-block;
-      border: 1px solid #ddd;
-      border-radius: 999px;
-      padding: 6px 12px;
-      font-size: 13px;
-      margin: 4px 6px 4px 0;
-    }
-    .project {
-      border: 1px solid #eee;
-      border-radius: 14px;
-      padding: 18px;
-      margin-bottom: 16px;
-    }
-    a {
-      color: #000;
-    }
-    footer {
-      text-align: center;
-      color: #777;
-      font-size: 14px;
-      padding-bottom: 40px;
-    }
-  </style>
+  <title>Erika González | Marketing & Data Analyst</title>
+  <meta name="description" content="Portfolio of Erika González — Marketing & Data Analyst (Python, SQL, Tableau)." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
-
 <body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Erika González</a>
+      <nav class="links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-  <h1>Erika Gonzalez</h1>
-  <p class="subtitle">
-    Marketing Intelligence & Data Analytics · Mexico City · English / Spanish
-  </p>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <p class="kicker">Marketing & Data Analyst • Mexico City</p>
+          <h1>I turn marketing, product, and customer data into actionable insights.</h1>
+          <p class="sub">
+            Python • SQL • Tableau • Experimentation • Funnel & Cohort Analysis • KPI Dashboards
+          </p>
 
-  <p>
-    <a href="https://www.linkedin.com/">LinkedIn</a> ·
-    <a href="https://github.com/">GitHub</a> ·
-    <a href="mailto:your@email.com">Email</a>
-  </p>
+          <div class="cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="cv.html">View CV</a>
+          </div>
 
-  <div class="tags">
-    <span>Python</span>
-    <span>SQL</span>
-    <span>Tableau</span>
-    <span>Marketing Analytics</span>
-    <span>A/B Testing</span>
-    <span>Data Visualization</span>
-  </div>
-</header>
+          <div class="icon-links" style="margin-top:16px;">
+            <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.notion.so/yournotionpage" target="_blank" aria-label="Notion"><i class="fa-solid fa-book"></i></a>
+            <a href="mailto:your.email@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
 
-<main>
+        <div class="card">
+          <h3>Highlights</h3>
+          <ul>
+            <li>Business-first analytics & dashboards</li>
+            <li>Clean methodology and decision-ready insights</li>
+            <li>End-to-end projects: data → story → recommendation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <h2>Selected Projects</h2>
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
 
-  <div class="project">
-    <h3>Showz — Marketing Funnel & ROMI Analysis</h3>
-    <p>
-      Analyzed marketing funnel performance, customer cohorts, and campaign ROMI to identify
-      optimization opportunities and support growth decisions.
-    </p>
-    <p>
-      <a href="#">GitHub Repo</a> ·
-      <a href="#">Report / Dashboard</a>
-    </p>
-  </div>
+        <div class="grid">
+          <article class="project">
+            <h3>Marketing Spend Optimisation & LTV Analysis (Event Ticketing)</h3>
+            <p class="muted">Problem: Evaluate channels, CAC, LTV, and ROMI to optimize spend.</p>
+            <p><strong>Tools:</strong> Python, SQL, Cohorts, Unit Economics</p>
+            <p><strong>Outcome:</strong> Recommendations to reallocate budget toward higher-ROI sources.</p>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#" target="_blank" rel="noreferrer">PDF</a>
+            </div>
+          </article>
 
-  <div class="project">
-    <h3>SQL Books App — Customer Reviews & Product Insight</h3>
-    <p>
-      Used SQL to analyze books, authors, publishers, and user ratings to propose
-      a value-driven feature set for a new reading app.
-    </p>
-    <p>
-      <a href="#">GitHub Repo</a>
-    </p>
-  </div>
+          <article class="project">
+            <h3>Experimentation & Revenue Growth (ICE/RICE + A/B Test)</h3>
+            <p class="muted">Problem: Prioritize hypotheses and evaluate experiment impact on conversion.</p>
+            <p><strong>Tools:</strong> Python, Stats, A/B Testing</p>
+            <p><strong>Outcome:</strong> Decision-ready conclusion with metrics and risks.</p>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#" target="_blank" rel="noreferrer">PDF</a>
+            </div>
+          </article>
 
-  <div class="project">
-    <h3>Megaline — Revenue Analysis by Mobile Plan</h3>
-    <p>
-      Compared Surf vs Ultimate prepaid plans using usage data (calls, SMS, internet)
-      and provided a revenue-based business recommendation.
-    </p>
-    <p>
-      <a href="#">GitHub Repo</a>
-    </p>
-  </div>
+          <article class="project">
+            <h3>YouTube Trends Intelligence Dashboard (Advertising Strategy)</h3>
+            <p class="muted">Problem: Identify trending patterns by time, category, and region.</p>
+            <p><strong>Tools:</strong> Tableau, Data Viz</p>
+            <p><strong>Outcome:</strong> Interactive dashboard for campaign planning.</p>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noreferrer">Tableau</a>
+              <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </article>
+        </div>
 
-  <h2>About</h2>
-  <p>
-    I specialize in transforming marketing and customer data into actionable insights
-    using Python, SQL, and BI tools. I’m interested in international, impact-driven
-    environments where analytics supports strategic decision-making.
-  </p>
+        <p class="muted small" style="margin-top:12px;">
+          Tip: Keep 6–10 projects max, lead with the ones that show business impact.
+        </p>
+      </div>
+    </section>
 
-</main>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="icon-links">
+          <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.notion.so/yournotionpage" target="_blank" aria-label="Notion"><i class="fa-solid fa-book"></i></a>
+          <a href="mailto:your.email@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p class="muted small">© <span id="year"></span> Erika González</p>
+      </div>
+    </footer>
+  </main>
 
-<footer>
-  © 2026 Erika Gonzalez · Built with GitHub Pages
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
