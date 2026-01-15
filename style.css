@@ -285,4 +285,47 @@ h2{margin:0 0 14px;font-size:28px}
   color: #555;
   transform: translateY(-3px);
 }
+/* ================================
+   Social icon buttons (site-wide)
+================================ */
+
+.social-links{
+  display:flex;
+  justify-content:center;      /* centers them */
+  align-items:center;
+  gap:14px;
+  margin-top:18px;
+  flex-wrap:wrap;
+}
+
+.social-btn{
+  width:44px;
+  height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;         /* circle */
+  text-decoration:none;
+  color:#111;
+  background:#f3f4f6;          /* light chip */
+  border:1px solid #e5e7eb;
+  transition: transform .15s ease, background .15s ease, box-shadow .15s ease, color .15s ease;
+}
+
+.social-btn i{
+  font-size:18px;
+  line-height:1;
+}
+
+.social-btn:hover{
+  transform: translateY(-2px);
+  background:#111;
+  color:#fff;
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+
+.social-btn:focus{
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(17,17,17,.15);
+}
 
