@@ -188,4 +188,38 @@ h2{margin:0 0 14px;font-size:28px}
   border: none;
   border-radius: 8px;
 }
+/* --- CV Buttons: force readable colors (prevents hover-only text) --- */
+.cv-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  color: #fff;              /* default for buttons */
+}
+
+/* Primary button */
+.cv-actions .btn.primary,
+.cv-actions .btn.primary:visited {
+  background: #111;
+  color: #fff;
+}
+
+/* Secondary button (Download) */
+.cv-actions .btn.secondary,
+.cv-actions .btn.secondary:visited {
+  background: transparent;  /* IMPORTANT */
+  border: 2px solid #111;
+  color: #111;              /* IMPORTANT */
+}
+
+/* Hover states */
+.cv-actions .btn.primary:hover {
+  background: #333;
+  color: #fff;
+}
+
+.cv-actions .btn.secondary:hover {
+  background: #111;
+  color: #fff;
+}
 
