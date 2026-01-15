@@ -328,4 +328,64 @@ h2{margin:0 0 14px;font-size:28px}
   outline: none;
   box-shadow: 0 0 0 4px rgba(17,17,17,.15);
 }
+/* --- Projects grid alignment --- */
+#projects .container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+  #projects .container { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  #projects .container { grid-template-columns: 1fr; }
+}
+
+/* --- Card structure to pin buttons to the bottom --- */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Links row sits at bottom */
+.card .links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 12px;
+}
+
+/* --- CTA buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.08s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: #111827;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #111827;
+  border-color: #e5e7eb;
+}
 
