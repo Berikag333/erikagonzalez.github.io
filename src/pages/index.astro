@@ -5,21 +5,38 @@ import { site } from "../data/site.js";
 
 <BaseLayout title={`${site.name} — Portfolio`}>
   <section class="hero">
-    <h1>{site.name}</h1>
-    <p class="role">{site.role}</p>
-    <p class="tagline">{site.tagline}</p>
+  <div class="hero-inner">
+    <!-- LEFT: your existing hero text (unchanged content) -->
+    <div class="hero-copy">
+      <h1>{site.name}</h1>
+      <p class="role">{site.role}</p>
+      <p class="tagline">{site.tagline}</p>
 
-    <!-- Buttons in your exact order -->
-    <div class="hero-buttons">
-      <a class="pill primary" href="/cv">View CV</a>
-      <a class="pill" href={site.links.notion} target="_blank" rel="noopener noreferrer">Notion Portfolio</a>
-      <a class="pill" href={site.links.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a class="pill" href={site.links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a class="pill" href={site.links.tableau} target="_blank" rel="noopener noreferrer">Tableau</a>
-      <a class="pill" href={site.links.website} target="_blank" rel="noopener noreferrer">Website</a>
-      <a class="pill" href={site.links.email}>Mail</a>
+      <div class="hero-buttons">
+        <a class="pill primary" href="/cv">View CV</a>
+        <a class="pill" href={site.links.notion} target="_blank" rel="noopener noreferrer">Notion Portfolio</a>
+        <a class="pill" href={site.links.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="pill" href={site.links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="pill" href={site.links.tableau} target="_blank" rel="noopener noreferrer">Tableau</a>
+        <a class="pill" href={site.links.website} target="_blank" rel="noopener noreferrer">Website</a>
+        <a class="pill" href={site.links.email}>Mail</a>
+      </div>
     </div>
-  </section>
+
+    <!-- RIGHT: circle video -->
+    <div class="hero-media" aria-label="Intro video">
+      <video
+        class="hero-video"
+        src="/portfolio//video/hero.mp4"
+        controls
+        playsinline
+        preload="metadata"
+      ></video>
+      
+    </div>
+  </div>
+</section>
+
 
   <section class="section">
     <h2>Featured projects</h2>
@@ -171,6 +188,24 @@ import { site } from "../data/site.js";
     .projects-btn:hover .arrow {
       transform: translateX(3px);
     }
+    /* Ensure the circle doesn't hide the controls */
+    .hero-media {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      overflow: visible; /* <-- KEY: allow controls to show */
+      flex-shrink: 0;
+      align-self: center;
+    }
+
+    .hero-video {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+
   </style>
   
 </BaseLayout>
