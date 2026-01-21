@@ -21,6 +21,11 @@ export const site = {
       href: "https://github.com/Berikag333/Marketing-Spend-Optimisation-LTV-Analysis-for-an-Event-Ticketing-Platform",
     },
     {
+      title: "Data-Driven Market Insights — Business Case",
+      tags: "Python · EDA · Market Analysis · Data Visualization · Strategy",
+      href: "https://github.com/Berikag333/data-driven-market-insights-business-case"
+    },
+    {
       title: "Experimentation & Revenue Growth (ICE/RICE + A/B Testing)",
       tags: "Hypothesis prioritization · Statistical testing",
       href: "https://github.com/Berikag333",
