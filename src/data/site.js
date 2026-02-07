@@ -1,8 +1,16 @@
 export const site = {
   name: "Erika Gonzalez",
   role: "Marketing & Data Analyst",
-  tagline:
-    "I translate marketing + customer data into budget and growth decisions (LTV, CAC, ROMI, experiments).",
+  tagline: `Data defines direction.
+I turn complexity into clarity.
+Curiosity and discipline drive every decision I make.
+With an MBA and over ten years of experience, I combine strategy with analytical thinking.
+Data has never been just numbers to me — it’s insight waiting to be uncovered.
+I’ve challenged assumptions and reshaped strategy through evidence.
+International experience across Europe and Mexico has strengthened my analytical and cultural perspective.
+I work with SQL, Python, and Tableau to transform insight into measurable business impact.
+Because assumptions inspire ideas — but evidence drives growth.`,
+
 
   links: {
     website: "https://berikag333.github.io/index.html",

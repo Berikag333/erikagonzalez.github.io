@@ -10,26 +10,7 @@ import { site } from "../data/site.js";
     <div class="hero-copy">
       <h1>{site.name}</h1>
       <p class="role">{site.role}</p>
-      <div class="tagline-saas">
-  <p class="tagline-kicker">Data defines direction.</p>
-
-  <p class="tagline-lead">
-    I turn complexity into clarity — transforming marketing + customer data into decision-ready insights that drive growth.
-  </p>
-
-  <ul class="tagline-bullets">
-    <li>Curiosity and discipline guide every decision I make.</li>
-    <li>MBA + 10+ years of business experience, grounded in evidence.</li>
-    <li>International perspective across Europe and Mexico.</li>
-    <li>SQL, Python, and Tableau to deliver measurable business impact.</li>
-  </ul>
-
-  <p class="tagline-close">
-    Assumptions inspire ideas — <strong>evidence drives growth.</strong>
-  </p>
-</div>
-
-
+      <p class="tagline">{site.tagline}</p>
 
       <div class="hero-buttons">
         <a class="pill primary" href="/cv">View CV</a>
@@ -76,14 +57,6 @@ import { site } from "../data/site.js";
       </a>
     </div>
   </section>
-    <!-- Home Image Below Featured Projects -->
-  <section class="home-image">
-    <img 
-      src="/images/home.jpg" 
-      alt="Marketing Analytics Visual"
-      loading="lazy"
-    />
-  </section>
 
   <style>
   
@@ -102,17 +75,12 @@ import { site } from "../data/site.js";
     }
 
     .tagline {
-      margin-top: 16px;
+      margin-top: 14px;
       max-width: 70ch;
-    }
-
-    .tagline p {
-      margin: 0 0 8px;
       line-height: 1.6;
-      font-size: 16px;
       opacity: 0.9;
+      font-size: 16px;
     }
-
 
     .hero-buttons {
       display: flex;
@@ -237,65 +205,6 @@ import { site } from "../data/site.js";
       object-fit: cover;
       display: block;
     }
-    /* ===== Image below Featured Projects ===== */
-
-.home-image {
-  margin-top: 60px;
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: center;
-}
-
-.home-image img {
-  width: 100%;
-  max-width: 1100px;
-  height: auto;
-  border-radius: 24px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.home-image img:hover {
-  transform: scale(1.01);
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.25);
-}
-/* SaaS storytelling hero copy */
-.tagline-saas {
-  margin-top: 16px;
-  max-width: 70ch;
-}
-
-.tagline-kicker {
-  margin: 0 0 10px;
-  font-weight: 850;
-  letter-spacing: -0.01em;
-  font-size: 18px;
-}
-
-.tagline-lead {
-  margin: 0 0 12px;
-  font-size: 16px;
-  line-height: 1.65;
-  opacity: 0.92;
-}
-
-.tagline-bullets {
-  margin: 0 0 12px;
-  padding-left: 18px;
-  line-height: 1.6;
-  opacity: 0.9;
-}
-
-.tagline-bullets li {
-  margin: 0 0 8px;
-  font-size: 15px;
-}
-
-.tagline-close {
-  margin: 0;
-  font-size: 15px;
-  opacity: 0.9;
-}
 
   </style>
   
