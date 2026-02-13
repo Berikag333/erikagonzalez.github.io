@@ -57,6 +57,14 @@ import { site } from "../data/site.js";
       </a>
     </div>
   </section>
+    <!-- Home Image Below Featured Projects -->
+  <section class="home-image">
+    <img 
+      src="/images/home.jpg" 
+      alt="Marketing Analytics Visual"
+      loading="lazy"
+    />
+  </section>
 
   <style>
   
@@ -205,6 +213,28 @@ import { site } from "../data/site.js";
       object-fit: cover;
       display: block;
     }
+    /* ===== Image below Featured Projects ===== */
+
+.home-image {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-image img {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.home-image img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.25);
+}
 
   </style>
   

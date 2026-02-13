@@ -5,57 +5,79 @@ import { site } from "../data/site.js";
 
 <BaseLayout title={`${site.name} — Portfolio`}>
   <section class="hero">
-  <div class="hero-inner">
-    <!-- LEFT: your existing hero text (unchanged content) -->
-    <div class="hero-copy">
-      <h1>{site.name}</h1>
-      <p class="role">{site.role}</p>
-      <div class="tagline-saas">
-  <p class="tagline-kicker">Data defines direction.</p>
+    <div class="hero-inner">
+      <!-- LEFT: hero text -->
+      <div class="hero-copy">
+        <h1>{site.name}</h1>
+        <p class="role">{site.role}</p>
 
-  <p class="tagline-lead">
-    I turn complexity into clarity — transforming marketing + customer data into decision-ready insights that drive growth.
-  </p>
+        <div class="tagline-saas">
+          <p class="tagline-kicker">Data defines direction.</p>
 
-  <ul class="tagline-bullets">
-    <li>Curiosity and discipline guide every decision I make.</li>
-    <li>MBA + 10+ years of business experience, grounded in evidence.</li>
-    <li>International perspective across Europe and Mexico.</li>
-    <li>SQL, Python, and Tableau to deliver measurable business impact.</li>
-  </ul>
+          <p class="tagline-lead">
+            I turn complexity into clarity — transforming marketing + customer data into decision-ready insights that drive growth.
+          </p>
 
-  <p class="tagline-close">
-    Assumptions inspire ideas — <strong>evidence drives growth.</strong>
-  </p>
-</div>
+          <ul class="tagline-bullets">
+            <li>Curiosity and discipline guide every decision I make.</li>
+            <li>MBA + 10+ years of business experience, grounded in evidence.</li>
+            <li>International perspective across Europe and Mexico.</li>
+            <li>SQL, Python, and Tableau to deliver measurable business impact.</li>
+          </ul>
 
+          <p class="tagline-close">
+            Assumptions inspire ideas — <strong>evidence drives growth.</strong>
+          </p>
+        </div>
 
+        <div class="hero-buttons">
+          <a class="pill primary" href="/cv">View CV</a>
+          <a class="pill" href={site.links.notion} target="_blank" rel="noopener noreferrer">Notion Portfolio</a>
+          <a class="pill" href={site.links.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="pill" href={site.links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="pill" href={site.links.tableau} target="_blank" rel="noopener noreferrer">Tableau</a>
+          <a class="pill" href={site.links.website} target="_blank" rel="noopener noreferrer">Website</a>
+          <a class="pill" href={site.links.email}>Mail</a>
+        </div>
+      </div>
 
-      <div class="hero-buttons">
-        <a class="pill primary" href="/cv">View CV</a>
-        <a class="pill" href={site.links.notion} target="_blank" rel="noopener noreferrer">Notion Portfolio</a>
-        <a class="pill" href={site.links.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a class="pill" href={site.links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a class="pill" href={site.links.tableau} target="_blank" rel="noopener noreferrer">Tableau</a>
-        <a class="pill" href={site.links.website} target="_blank" rel="noopener noreferrer">Website</a>
-        <a class="pill" href={site.links.email}>Mail</a>
+      <!-- RIGHT: Video CV PRO (replaces circle video) -->
+      <div class="video-cv reveal" aria-label="Video CV">
+        <button class="video-thumb" type="button" id="videoCvBtn" aria-label="Play Video CV">
+          <img
+            src="/images/video-cv-thumb.jpg" alt="Video CV Thumbnail" />
+            alt="Video CV — Erika Gonzalez"
+            loading="lazy"
+          />
+
+          <span class="play-overlay" aria-hidden="true">
+            <span class="play-icon">▶</span>
+            <span class="play-text">Play Video CV (1:56)</span>
+          </span>
+        </button>
+
+        <p class="video-caption">
+          A short intro to how I think, work, and drive impact through marketing + analytics.
+        </p>
       </div>
     </div>
 
-    <!-- RIGHT: circle video -->
-    <div class="hero-media" aria-label="Intro video">
-      <video
-        class="hero-video"
-        src="/video/hero.mp4"
-        controls
-        playsinline
-        preload="metadata"
-      ></video>
-      
-    </div>
-  </div>
-</section>
+    <!-- Modal -->
+    <dialog class="video-modal" id="videoCvModal" aria-label="Video CV modal">
+      <button class="modal-close" type="button" id="videoCvClose" aria-label="Close">✕</button>
 
+      <div class="video-frame">
+        <iframe
+          id="videoCvIframe"
+          src="https://www.youtube.com/embed/Qv6i8Se2Jjs?rel=0"
+          title="Erika Gonzalez — Video CV"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </dialog>
+  </section>
 
   <section class="section">
     <h2>Featured projects</h2>
@@ -76,17 +98,23 @@ import { site } from "../data/site.js";
       </a>
     </div>
   </section>
-    <!-- Home Image Below Featured Projects -->
+
+  <!-- Home Image Below Featured Projects -->
   <section class="home-image">
-    <img 
-      src="/images/home.jpg" 
+    <img
+      src="/images/home.jpg"
       alt="Marketing Analytics Visual"
       loading="lazy"
     />
   </section>
 
   <style>
-  
+    :root{
+      --navy: #0B1220;
+      --teal: #14B8A6;
+      --paper: #F6F7FB;
+    }
+
     h1 {
       font-size: 48px;
       letter-spacing: -0.03em;
@@ -100,19 +128,6 @@ import { site } from "../data/site.js";
       opacity: 0.85;
       font-weight: 650;
     }
-
-    .tagline {
-      margin-top: 16px;
-      max-width: 70ch;
-    }
-
-    .tagline p {
-      margin: 0 0 8px;
-      line-height: 1.6;
-      font-size: 16px;
-      opacity: 0.9;
-    }
-
 
     .hero-buttons {
       display: flex;
@@ -220,83 +235,261 @@ import { site } from "../data/site.js";
     .projects-btn:hover .arrow {
       transform: translateX(3px);
     }
-    /* Ensure the circle doesn't hide the controls */
-    .hero-media {
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      overflow: visible; /* <-- KEY: allow controls to show */
-      flex-shrink: 0;
+
+    /* ===== Image below Featured Projects ===== */
+    .home-image {
+      margin-top: 60px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .home-image img {
+      width: 100%;
+      max-width: 1100px;
+      height: auto;
+      border-radius: 24px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .home-image img:hover {
+      transform: scale(1.01);
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.25);
+    }
+
+    /* SaaS storytelling hero copy */
+    .tagline-saas {
+      margin-top: 16px;
+      max-width: 70ch;
+    }
+
+    .tagline-kicker {
+      margin: 0 0 10px;
+      font-weight: 850;
+      letter-spacing: -0.01em;
+      font-size: 18px;
+    }
+
+    .tagline-lead {
+      margin: 0 0 12px;
+      font-size: 16px;
+      line-height: 1.65;
+      opacity: 0.92;
+    }
+
+    .tagline-bullets {
+      margin: 0 0 12px;
+      padding-left: 18px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .tagline-bullets li {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+
+    .tagline-close {
+      margin: 0;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    /* ===== Video CV PRO ===== */
+    .video-cv{
+      max-width: 520px;
+      justify-self: end;
       align-self: center;
     }
 
-    .hero-video {
+    .video-thumb{
+      all: unset;
+      display: block;
       width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
+      cursor: pointer;
+      border-radius: 22px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 18px 50px rgba(0,0,0,.18);
+      transform: translateZ(0);
+      border: 1px solid rgba(20,184,166,.25);
+      background: rgba(11,18,32,.04);
+    }
+
+    .video-thumb img{
+      width: 100%;
+      height: auto;
       display: block;
     }
-    /* ===== Image below Featured Projects ===== */
 
-.home-image {
-  margin-top: 60px;
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: center;
-}
+    .play-overlay{
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-content: center;
+      gap: 10px;
+      background: radial-gradient(ellipse at center, rgba(11,18,32,.45), rgba(11,18,32,.86));
+      transition: transform .25s ease;
+    }
 
-.home-image img {
-  width: 100%;
-  max-width: 1100px;
-  height: auto;
-  border-radius: 24px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
+    .play-icon{
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: rgba(20,184,166,.18);
+      border: 1px solid rgba(20,184,166,.55);
+      backdrop-filter: blur(8px);
+      font-size: 22px;
+      color: white;
+    }
 
-.home-image img:hover {
-  transform: scale(1.01);
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.25);
-}
-/* SaaS storytelling hero copy */
-.tagline-saas {
-  margin-top: 16px;
-  max-width: 70ch;
-}
+    .play-text{
+      font-weight: 700;
+      letter-spacing: .2px;
+      color: white;
+    }
 
-.tagline-kicker {
-  margin: 0 0 10px;
-  font-weight: 850;
-  letter-spacing: -0.01em;
-  font-size: 18px;
-}
+    .video-thumb:hover .play-overlay{
+      transform: scale(1.02);
+    }
 
-.tagline-lead {
-  margin: 0 0 12px;
-  font-size: 16px;
-  line-height: 1.65;
-  opacity: 0.92;
-}
+    .video-caption{
+      margin-top: 12px;
+      opacity: .85;
+      font-size: .95rem;
+      line-height: 1.35;
+      max-width: 58ch;
+    }
 
-.tagline-bullets {
-  margin: 0 0 12px;
-  padding-left: 18px;
-  line-height: 1.6;
-  opacity: 0.9;
-}
+    /* Modal */
+    .video-modal{
+      width: min(980px, 92vw);
+      border: none;
+      border-radius: 18px;
+      padding: 16px;
+      background: rgba(11,18,32,.92);
+      color: white;
+    }
 
-.tagline-bullets li {
-  margin: 0 0 8px;
-  font-size: 15px;
-}
+    .video-modal::backdrop{
+      background: rgba(0,0,0,.55);
+    }
 
-.tagline-close {
-  margin: 0;
-  font-size: 15px;
-  opacity: 0.9;
-}
+    .modal-close{
+      all: unset;
+      cursor: pointer;
+      float: right;
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.10);
+    }
 
+    .video-frame{
+      margin-top: 18px;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(20,184,166,.18);
+    }
+
+    .video-frame iframe{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Scroll micro-anim */
+    .reveal{
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+
+    .reveal.is-visible{
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Layout improvements for hero */
+    .hero-inner{
+      display: grid;
+      grid-template-columns: 1.25fr 0.9fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 980px){
+      .hero-inner{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .video-cv{
+        max-width: 680px;
+        justify-self: start;
+      }
+    }
   </style>
-  
+
+  <script>
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) e.target.classList.add("is-visible");
+      });
+    }, { threshold: 0.2 });
+
+    revealEls.forEach(el => io.observe(el));
+
+    // Video CV modal + autoplay + stop + GA4 tracking
+    const btn = document.getElementById("videoCvBtn");
+    const modal = document.getElementById("videoCvModal");
+    const closeBtn = document.getElementById("videoCvClose");
+    const iframe = document.getElementById("videoCvIframe");
+
+    const baseSrc = iframe?.getAttribute("src") || "";
+
+    function trackVideoClick() {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "video_cv_play", {
+          event_category: "engagement",
+          event_label: "home_video_cv",
+          value: 1
+        });
+      }
+    }
+
+    function openVideo() {
+      if (!modal) return;
+      modal.showModal();
+
+      if (iframe && baseSrc && !baseSrc.includes("autoplay=1")) {
+        iframe.setAttribute("src", baseSrc + (baseSrc.includes("?") ? "&" : "?") + "autoplay=1");
+      }
+
+      trackVideoClick();
+    }
+
+    function closeVideo() {
+      if (!modal) return;
+      modal.close();
+      if (iframe && baseSrc) iframe.setAttribute("src", baseSrc);
+    }
+
+    btn?.addEventListener("click", openVideo);
+    closeBtn?.addEventListener("click", closeVideo);
+
+    // click on backdrop closes
+    modal?.addEventListener("click", (e) => {
+      if (e.target === modal) closeVideo();
+    });
+  </script>
 </BaseLayout>
+
